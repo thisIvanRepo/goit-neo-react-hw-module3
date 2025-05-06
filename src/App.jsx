@@ -33,7 +33,10 @@ function App() {
   };
 
   const visibleContacts = contacts.filter((contact) => {
-    return contact.name.toUpperCase().includes(filter.toUpperCase());
+    return contact.name
+      .toUpperCase()
+      .trim()
+      .includes(filter.toUpperCase().trim());
   });
 
   console.log("Visible contacts:", visibleContacts);
