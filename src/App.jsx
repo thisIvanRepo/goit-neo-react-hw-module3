@@ -39,8 +39,6 @@ function App() {
       .includes(filter.toUpperCase().trim());
   });
 
-  console.log("Visible contacts:", visibleContacts);
-
   return (
     <>
       <div>

@@ -27,7 +27,10 @@ const ContactForm = ({ onSubmit }) => {
       <Formik
         initialValues={initContact}
         validationSchema={ContactSchema}
-        onSubmit={onSubmit}
+        onSubmit={(values, actions) => {
+          onSubmit(values);
+          actions.resetForm();
+        }}
       >
         {() => {
           return (
